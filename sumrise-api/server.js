@@ -62,7 +62,6 @@ apiRoutes.route('/article/:article_id')
 apiRoutes.route('/articles')
     .get(articleController.getArticles);
 
-//localhost:8080/api/user
 app.use('/api', apiRoutes);
 
 app.listen(port);
