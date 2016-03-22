@@ -8,7 +8,7 @@ exports.getUser = function(req, res){
             res.json(err);
         }
         //If user not found
-        if(!user) { return callback(null, false); }
+        if(!user) { return res.json({success: false, message: "No User Found"}); }
 
         res.json({success: true, user: user});
         });
