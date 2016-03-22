@@ -2,7 +2,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var mongoose = require('mongoose');
-var bcrypt = require('bcrypt');
 
 var app = express();
 
@@ -50,17 +49,14 @@ apiRoutes.route('/users')
     .get(userController.getUsers);
 
 //localhost:8080/api/article
-apiRoutes.route('/article')
-    .post(articleController.postArticle);
+apiRoutes.route('/articles')
+    .post(articleController.postArticle)
+    .get(articleController.getArticles);
 
 //localhost:8080/api/article/483p021u80yrhfjdkh01
-apiRoutes.route('/article/:article_id')
+apiRoutes.route('/articles/:article_id')
     .get(articleController.getArticle)
     .delete(articleController.deleteArticle);
-
-//localhost:8080/api/articles
-apiRoutes.route('/articles')
-    .get(articleController.getArticles);
 
 app.use('/api', apiRoutes);
 

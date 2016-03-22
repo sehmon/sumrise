@@ -7,11 +7,6 @@ var config = require('../../config');
 var key = config.apiKey;
 var id = config.appId;
 
-//-----------------------------------------
-function getSummary(url, callback){
-
-};
-//-----------------------------------------
 
 exports.getArticles = function(req, res){
     Article.find({ userId: req.decoded._doc._id }, function(err, articles) {
@@ -32,7 +27,7 @@ exports.getArticle = function(req, res){
         }, function(err, article){
         if(err){
             res.send(err);
-        } else if (!err){
+        } else if (!article){
             res.json({success: false, message: "Article not found"});
         } else {
             res.json({success: true, article: article});
@@ -41,7 +36,10 @@ exports.getArticle = function(req, res){
 };
 
 exports.deleteArticle = function(req, res){
-    Article.remove({ userId: req.decoded._doc._id, _id: req.params.article_id }, function(err, article) {
+    Article.remove({ 
+        userId: req.decoded._doc._id, 
+        _id: req.params.article_id 
+        }, function(err, article) {
         if(err){
             res.send(err);
         } else {
