@@ -14,6 +14,7 @@ This is full application, with user authenticaiton and http requests to a server
 3. Android Client - Java <br>
 
 The only part that is working right now is sumrise-api. Here's how to run it: 
+(The API is live, you can access it at: ~45.55.186.89:8080~
 
 
 1. Install <a href="https://www.mongodb.org/downloads#production">MongoDB</a>
