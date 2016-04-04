@@ -13,6 +13,13 @@ This is full application, with user authenticaiton and http requests to a server
 2. Chrome Extension - HTML, CSS, and JS <br>
 3. Android Client - Java <br>
 
+Steps to submit an article to your account:
+
+1. Login or create a new account using the /login or /signup endpoints
+2. Save the JWT response, this will be your way to authenticate your credentials to the server
+3. submit articles using the /articles post endpoint making sure to include your access token and your article url
+4. View the submitted article using the /articles or /articles/<article_id> endpoint
+
 The only part that is working right now is sumrise-api. Here's how to run it: 
 (The API is live, you can access it at: 45.55.186.89:3000
 
