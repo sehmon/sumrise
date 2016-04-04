@@ -25,7 +25,7 @@ The only part that is working right now is sumrise-api. Here's how to run it:
 
 ###API Endpoints:
 
-*/signup : "POST" (https://github.com/yawkity/sumrise/blob/master/img/login.png)
+*/signup : "POST" ![signup] (https://github.com/yawkity/sumrise/blob/master/img/login.png)
 
 */login : "POST"
 
