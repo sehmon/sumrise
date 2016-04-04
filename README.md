@@ -41,6 +41,9 @@ API Headers starting with: "/api/" require an access token in the header of the 
 You can get a JWT access token from the /login endpoint. 
 
 *TODOS
+
 1. Notify User if JWT is expired
+
 2. Fix all API responses to include a "success" parameter
+
 3. Build a client to actually use it lol
