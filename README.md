@@ -25,17 +25,15 @@ The only part that is working right now is sumrise-api. Here's how to run it:
 
 ###API Endpoints:
 
-*/signup : "POST" ![signup] (https://github.com/yawkity/sumrise/blob/master/img/login.png)
+*/signup : "POST" ![signup] (https://github.com/yawkity/sumrise/blob/master/img/signup.png)
 
-*/login : "POST"
+*/login : "POST" ![login] (https://github.com/yawkity/sumrise/blob/master/img/signup.png)
 
-*/api/user : "GET"
+*/api/article/:article_id : "GET", "DELETE" ![article-delete] (https://github.com/yawkity/sumrise/blob/master/img/articles-get-id.png)
 
-*/api/users : "GET"
 
-*/api/article/:article_id : "GET", "DELETE"
+*/api/articles : "GET", "POST" ![articles-post] (https://github.com/yawkity/sumrise/blob/master/img/articles-get.png)
 
-*/api/articles : "GET", "POST"
 
 API Headers starting with: "/api/" require an access token in the header of the request in the following form: <br>
 { x-access-token: "access-token-generated-from-/login"} 
