@@ -14,7 +14,7 @@ This is full application, with user authenticaiton and http requests to a server
 3. Android Client - Java <br>
 
 The only part that is working right now is sumrise-api. Here's how to run it: 
-(The API is live, you can access it at: ~45.55.186.89:8080~
+(The API is live, you can access it at: 45.55.186.89:3000
 
 
 1. Install <a href="https://www.mongodb.org/downloads#production">MongoDB</a>
@@ -26,16 +26,23 @@ The only part that is working right now is sumrise-api. Here's how to run it:
 ###API Endpoints:
 
 */signup : "POST"
+
 */login : "POST"
+
 */api/user : "GET"
+
 */api/users : "GET"
-*/api/article : "POST"
+
 */api/article/:article_id : "GET", "DELETE"
-*/api/articles : "GET"
+
+*/api/articles : "GET", "POST"
 
 API Headers starting with: "/api/" require an access token in the header of the request in the following form: <br>
 { x-access-token: "access-token-generated-from-/login"} 
 
 You can get a JWT access token from the /login endpoint. 
 
-
+*TODOS
+1. Notify User if JWT is expired
+2. Fix all API responses to include a "success" parameter
+3. Build a client to actually use it lol
